@@ -5,7 +5,7 @@ const mongoose = require ('mongoose');
 mongoose.connect("mongodb://127.0.0.1:27017/ERP_System");
 
 const app = express();
-const technology_Route = require('./Univercity/university_Route');
+const technology_Route = require('./Technology/technology_Route');
 const university_Route = require('./Univercity/university_Route');
 const college_Route = require('./College/college_Route');
 const city_Route = require('./City/city_Route');

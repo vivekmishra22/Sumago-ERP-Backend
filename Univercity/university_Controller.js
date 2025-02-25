@@ -51,7 +51,7 @@ const Delete = async (req, res) => {
 
 //Update API
 const Update = async (req, res) => {
-    const {university_id, university_name, status} = req.body;
+    const {university_name, status} = req.body;
     try{
         const data = await model.updateOne(
             {_id: req.params._id},
