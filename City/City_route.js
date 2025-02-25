@@ -1,4 +1,4 @@
-const {add, getdata, getbyId, Update, Delete } = require ('../City/City_contaller');
+const {add, getdata, getbyId, Update, Delete } = require ('../City/city_Controller');
 
 const express = require ('express');
 

@@ -1,11 +1,11 @@
-const model = require('../Technology/Technology_model')
+const model = require('../City/city_Model')
 
 // post API
 const add = async(req, res) => {
-    const {  name, status} = req.body;
+    const { city_name, status} = req.body;
     try {
         const data = new model({
-             name, status
+            city_name, status
         });
         const userdata = await data.save()
         res.send({userdata});
@@ -28,7 +28,7 @@ const getdata = async(req, res) => {
 }
 
 // getById API
-const getbyIdtechnology = async (req, res) => {
+const getbyId = async (req, res) => {
     try{
         const data = await model.findOne({_id: req.params})
         res.status(200).send({data});
@@ -38,7 +38,7 @@ const getbyIdtechnology = async (req, res) => {
 }
 
 // Delete API
-const deleteTechnology = async (req, res) => {
+const Delete = async (req, res) => {
     try{
         const userdata = await model.deleteOne({_id: req.params._id})
         res.status(200).send({userdata});
@@ -50,13 +50,13 @@ const deleteTechnology = async (req, res) => {
 
 
 //Update API
-const UpdateTechnology = async (req, res) => {
-    const {technologyid, name, status} = req.body;
+const Update = async (req, res) => {
+    const {city_name, status} = req.body;
     try{
         const data = await model.updateOne(
             {_id: req.params._id},
             { $set: {
-                 name, status
+                city_name, status
             },}
             
         );
@@ -73,5 +73,5 @@ const UpdateTechnology = async (req, res) => {
 };
 
 
-module.exports = {add, getdata, getbyIdtechnology, deleteTechnology, UpdateTechnology}
+module.exports = {add, getdata, getbyId, Delete , Update}
 

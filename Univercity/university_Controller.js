@@ -1,4 +1,4 @@
-const model = require('../Univercity/University _model')
+const model = require('../Univercity/university_Model')
 
 // post API
 const add = async(req, res) => {
