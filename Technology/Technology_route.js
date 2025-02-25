@@ -1,4 +1,4 @@
-const {add, getdata, getbyIdtechnology, UpdateTechnology, deleteTechnology} = require ('../Technology/Technology_contaller');
+const {add, getdata, getbyIdtechnology, UpdateTechnology, deleteTechnology} = require ('../Technology/technology_Controller');
 
 const express = require ('express');
 

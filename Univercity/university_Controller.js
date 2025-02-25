@@ -1,11 +1,11 @@
-const model = require('../College/College_model')
+const model = require('../Univercity/university_Model')
 
 // post API
 const add = async(req, res) => {
-    const {   university_name, college_name, city_name, status} = req.body;
+    const { university_name, status} = req.body;
     try {
         const data = new model({
-             university_name, college_name, city_name, status
+            university_name, status
         });
         const userdata = await data.save()
         res.send({userdata});
@@ -51,12 +51,12 @@ const Delete = async (req, res) => {
 
 //Update API
 const Update = async (req, res) => {
-    const {  university_name, college_name, city_name, status} = req.body;
+    const {university_name, status} = req.body;
     try{
         const data = await model.updateOne(
             {_id: req.params._id},
             { $set: {
-                 university_name, college_name, city_name, status
+                university_name, status
             },}
             
         );
