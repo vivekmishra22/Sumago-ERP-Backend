@@ -9,13 +9,18 @@ const Technology_route = require('./Technology/Technology_route');
 const University_route = require('./Univercity/University_route');
 const College_route = require('./College/College_route');
 const City_route = require('./City/City_route');
+const office_route = require('./Office/office_Route');
+const education_route = require('./Education/education_Route');
+
 app.use(express.json())
 app.use(cors());
 
-app.use('/', Technology_route)
-app.use('/', University_route)
-app.use('/', College_route)
-app.use('/',City_route)
+app.use('/', Technology_route);
+app.use('/', University_route);
+app.use('/', College_route);
+app.use('/',City_route);
+app.use('/',office_route);
+app.use('/',education_route);
 
 app.get(('/'),(req,res) =>
     res.send("database canected ERP system"));
