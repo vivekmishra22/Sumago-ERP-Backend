@@ -9,8 +9,6 @@ const Technology_route = require('./Technology/Technology_route');
 const University_route = require('./Univercity/University_route');
 const College_route = require('./College/College_route');
 const City_route = require('./City/City_route');
-const course_Route = require('./Courses/course_Route');
-const guestlecturer_Route = require('./Guest_lecturer/guestlecturer_Route');
 app.use(express.json())
 app.use(cors());
 
@@ -18,8 +16,7 @@ app.use('/', Technology_route)
 app.use('/', University_route)
 app.use('/', College_route)
 app.use('/',City_route)
-app.use('/',course_Route)
-app.use('/',guestlecturer_Route )
+
 app.get(('/'),(req,res) =>
     res.send("database canected ERP system"));
 
