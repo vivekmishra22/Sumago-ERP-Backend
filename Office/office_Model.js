@@ -13,7 +13,7 @@ const data = mongoose.Schema({
         type: String,
         required: true,
     },
-    city_name: {
+    office_city_name: {
         type: String,
         required: true,
     },
