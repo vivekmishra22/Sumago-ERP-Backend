@@ -5,7 +5,8 @@
         //     type:String,
         //     required:true,
         // },
-        universityId: { type: mongoose.Schema.Types.ObjectId, ref: "university" },
+        // universityId: { type: mongoose.Schema.Types.ObjectId, ref: "university" },
+        university_name:String,
         college_name:{
             type:String,
             required:true,
@@ -15,7 +16,8 @@
         //     required:true,
         // },
 
-        cityId: { type: mongoose.Schema.Types.ObjectId, ref: "city" },
+        // cityId: { type: mongoose.Schema.Types.ObjectId, ref: "city" },
+        city_name:String,
             
         status:{
             // type:active/inactive,
