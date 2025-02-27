@@ -2,10 +2,10 @@ const model = require('../Office/office_Model')
 
 // post API
 const add = async (req, res) => {
-    const { office_name, city_name, status } = req.body;
+    const { office_name, office_city_name, status } = req.body;
     try {
         const data = new model({
-            office_name, city_name, status
+            office_name, office_city_name, status
         });
         const userdata = await data.save()
         res.send({ userdata });
@@ -51,13 +51,13 @@ const Delete = async (req, res) => {
 
 //Update API
 const Update = async (req, res) => {
-    const { office_name, city_name, status } = req.body;
+    const { office_name, office_city_name, status } = req.body;
     try {
         const data = await model.updateOne(
             { _id: req.params._id },
             {
                 $set: {
-                    office_name, city_name, status
+                    office_name, office_city_name, status
                 },
             }
 
